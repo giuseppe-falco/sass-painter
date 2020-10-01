@@ -4,14 +4,17 @@
   margin: auto;
 }
 
+.d-none {
+  display: none;
+}
+
 header {
   width: 100%;
-  height: 95px;
   background-color: #101010;
+  color: #fff;
 }
 header .header-top {
   margin: auto;
-  color: #fff;
   padding-right: 5px;
 }
 header .header-top li {
@@ -41,6 +44,7 @@ header .header-top .header-contacts select {
 header .header-top .header-nav {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
   height: 55px;
 }
 header .header-top .header-nav img {
@@ -53,14 +57,37 @@ header .header-top .header-nav img {
 header .header-top .header-nav li {
   font-size: 14px;
   margin: 0 25px;
+  cursor: pointer;
 }
 header .header-top .header-nav li i {
   color: #878787;
 }
+@media screen and (max-width:1100px) {
+  header .header-top {
+    display: none;
+  }
+  header .container {
+    width: 100%;
+  }
+  header .header-mobile {
+    display: block;
+    position: relative;
+    text-align: left;
+    font-size: 25px;
+    padding: 10px 0;
+    margin-left: 20px;
+  }
+  header .header-mobile img {
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 .hero {
   background-image: url(../img/hero.jpg);
-  height: 500px;
   width: 100%;
   position: relative;
   background-repeat: no-repeat;
@@ -74,7 +101,7 @@ header .header-top .header-nav li i {
 }
 .hero .container .author-bg {
   position: absolute;
-  bottom: -70px;
+  bottom: 10px;
   left: 50px;
   color: #ddd;
   font-size: 11px;
@@ -85,7 +112,6 @@ header .header-top .header-nav li i {
   width: fit-content;
   color: #fff;
   font-weight: 300;
-  margin-top: 10px;
   margin-right: 30px;
 }
 .hero-left p {
@@ -93,11 +119,11 @@ header .header-top .header-nav li i {
 }
 .hero-left h1 {
   font-weight: 300;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 .hero-left li {
   list-style: none;
-  margin: 15px 0;
+  margin: 10px 0;
   margin-left: 5px;
   letter-spacing: -0.3px;
 }
@@ -109,10 +135,13 @@ header .header-top .header-nav li i {
   color: grey;
 }
 .hero-left .download-btn {
+  cursor: pointer;
   background-color: grey;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 50px;
+  margin-bottom: 20px;
   padding: 10px 0 10px 15px;
   letter-spacing: 0.5px;
 }
@@ -157,6 +186,7 @@ header .header-top .header-nav li i {
   color: #fff;
   background-color: #009cff;
   border-color: #009cff;
+  cursor: pointer;
 }
 .hero-right .hero-offer {
   background-color: #fff;
@@ -182,6 +212,90 @@ header .header-top .header-nav li i {
   position: absolute;
   top: 30px;
   right: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width:820px) {
+  .hero {
+    background-image: none;
+    background-color: #fff;
+  }
+  .hero .container {
+    display: block;
+    width: 95%;
+    margin: auto;
+  }
+  .hero-left {
+    position: relative;
+  }
+  .hero-left li, .hero-left p, .hero-left h1 {
+    color: #333;
+    font-weight: 400;
+  }
+  .hero-left li {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .hero-left h1 {
+    font-size: 21px;
+  }
+  .hero-left p {
+    display: block;
+    font-size: 21px;
+  }
+  .hero-left img {
+    display: block;
+    width: 120px;
+    margin: 20px auto 20px auto;
+    position: relative;
+    left: 50%;
+  }
+  .hero-left .download-btn {
+    background-color: #fff;
+    border: 1px solid #333;
+    box-shadow: 2px 1px lightgrey;
+    color: #333;
+    padding: 10px 30px;
+    font-size: 10px;
+  }
+  .hero-left .download-btn h4 {
+    display: inline;
+    font-weight: 200;
+  }
+  .hero-left .download-btn span {
+    font-weight: 200;
+    font-size: 10px;
+  }
+  .hero-left .download-btn .download-icon {
+    display: none;
+  }
+  .hero-right {
+    background-color: #eaeaea;
+    width: 100%;
+  }
+  .hero-right .hero-price #hero-price {
+    color: #000;
+  }
+  .hero-right .hero-price span {
+    color: #999;
+  }
+  .hero-right .hero-price button {
+    font-size: 25px;
+    width: 100%;
+    padding: 15px 0;
+  }
+  .hero-right .hero-offer {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+nav {
+  background-color: #e6e6e6;
+  height: 55px;
+}
+nav li {
+  display: inline;
 }
 
 body {

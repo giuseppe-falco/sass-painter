@@ -5,12 +5,11 @@ $bg-color:#101010;
 
 header{
     width: 100%;
-    height: 95px;
     background-color: $bg-color;
+    color: #fff;
 
     .header-top{
         margin: auto;
-        color: #fff;
         padding-right: 5px;
         
         & li{
@@ -46,6 +45,7 @@ header{
         .header-nav{
             display: flex;
             align-items: center;
+            padding-bottom:10px;
             height: 55px;
 
             & img{
@@ -57,10 +57,45 @@ header{
             & li{
                 font-size:14px ;
                 margin:0 25px;
+                cursor: pointer;
             
                     & i{
                         color:#878787;
                     }
+            }
+        }
+    }
+
+
+    @#{$tablet}{
+
+        & {
+            // height: 50px;
+         
+            .header-top{
+                display: none;
+            }   
+
+            .container{
+                width: 100%;
+            }
+
+            & .header-mobile{
+                display: block;
+                position: relative;
+                text-align: left;
+                font-size: 25px;
+                padding:10px 0;
+                margin-left:20px;
+
+                & img{
+                    width: 80px;
+                    position: absolute;
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%,-50%);
+                    
+                }
             }
         }
     }
