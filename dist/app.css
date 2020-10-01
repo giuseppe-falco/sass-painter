@@ -1,4 +1,196 @@
-body {
-  background-color: red;
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap);@charset "UTF-8";
+.container {
+  width: 60%;
+  margin: auto;
 }
 
+header {
+  width: 100%;
+  height: 95px;
+  background-color: #101010;
+}
+header .header-top {
+  margin: auto;
+  color: #fff;
+  padding-right: 5px;
+}
+header .header-top li {
+  list-style: none;
+  display: inline;
+  font-size: 12px;
+}
+header .header-top .header-contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
+}
+header .header-top .header-contacts li {
+  color: #989898;
+  padding-right: 15px;
+}
+header .header-top .header-contacts li i {
+  color: #009cff;
+  font-size: 15px;
+  padding-right: 10px;
+}
+header .header-top .header-contacts select {
+  margin-left: 15px;
+  font-size: 12px;
+}
+header .header-top .header-nav {
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
+header .header-top .header-nav img {
+  max-width: 90px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-right: 20px;
+}
+header .header-top .header-nav li {
+  font-size: 14px;
+  margin: 0 25px;
+}
+header .header-top .header-nav li i {
+  color: #878787;
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.hero .container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding-top: 30px;
+}
+.hero .container .author-bg {
+  position: absolute;
+  bottom: -70px;
+  left: 50px;
+  color: #ddd;
+  font-size: 11px;
+}
+.hero-left {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+.hero-left p {
+  font-size: 30px;
+}
+.hero-left h1 {
+  font-weight: 300;
+  margin: 20px 0;
+}
+.hero-left li {
+  list-style: none;
+  margin: 15px 0;
+  margin-left: 5px;
+  letter-spacing: -0.3px;
+}
+.hero-left li::before {
+  content: "\F105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+  color: grey;
+}
+.hero-left .download-btn {
+  background-color: grey;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 0 10px 15px;
+  letter-spacing: 0.5px;
+}
+.hero-left .download-btn h4 {
+  font-weight: 400;
+}
+.hero-left .download-btn span {
+  font-size: 14px;
+}
+.hero-left .download-btn .download-icon {
+  float: right;
+  border-left: 1px solid #fff;
+  font-size: 30px;
+  padding: 0 15px;
+  margin-top: -18px;
+  margin-left: 35px;
+}
+.hero-right {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+}
+.hero-right .hero-price #hero-price {
+  font-size: 26px;
+  padding-top: 30px;
+}
+.hero-right .hero-price span {
+  display: block;
+  font-size: 14px;
+  color: #999;
+  padding-bottom: 10px;
+}
+.hero-right .hero-price button {
+  font-size: 15px;
+  padding: 5px 20px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  color: #fff;
+  background-color: #009cff;
+  border-color: #009cff;
+}
+.hero-right .hero-offer {
+  background-color: #fff;
+  color: #000;
+  padding: 15px;
+  padding-right: 30px;
+}
+.hero-right .hero-offer h4 {
+  color: #2c2c2c;
+  font-weight: 400;
+}
+.hero-right .hero-offer p {
+  color: #333;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.hero-right .hero-offer a {
+  color: #009cff;
+  font-size: 14px;
+  text-decoration: none;
+}
+.hero-right img {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+body {
+  background-color: grey;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
