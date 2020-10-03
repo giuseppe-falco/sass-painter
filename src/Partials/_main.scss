@@ -512,15 +512,30 @@ nav {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
+        
+        
         & .box{
+            position: relative;
             margin:20px;
             width: 15%;
             // height: 300px;
-
+            
             & img{
                 width: 100%;
+                transition: transform .5s ease;
             }
+            
+            & .title{
+                color:#fff;
+                position: absolute;
+                bottom: 10%;
+                left:50%;
+                transform: translate(-50%);
+            }
+
+            & img:hover {
+                transform: scale(1.2);
+              }
         }
     }
 
@@ -539,6 +554,53 @@ nav {
             & .box{
                 width: 40%;
             }
+        }
+    }
+}
+
+.murales{
+    padding: 80px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/brushpacks-bg.jpg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    & .text-box{
+        color:#333;
+        background-color: #fff;
+        width: 30%;
+        min-height: 300px;
+        max-height: 50%;
+        margin: 20px;
+        padding: 0 30px;
+        padding-top:80px;
+        font-size: 0.9em;
+        line-height: 25px;
+        text-align: center;
+
+        & h3{
+            font-weight: 400;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        & a{
+            color:#009cff;
+            text-decoration: none;
+        }
+
+        @#{$tablet}{
+            & {
+                width: 40%;
+            }
+        }
+
+        @#{$phone}{
+                width: 80%;
         }
     }
 }
