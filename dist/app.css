@@ -88,10 +88,12 @@ header .header-top .header-nav li i {
 
 .hero {
   background-image: url(../img/hero.jpg);
+  height: auto;
   width: 100%;
   position: relative;
   background-repeat: no-repeat;
   background-position: top center;
+  padding-bottom: 20px;
 }
 .hero .container {
   display: flex;
@@ -100,9 +102,12 @@ header .header-top .header-nav li i {
   padding-top: 30px;
 }
 .hero .container .author-bg {
-  position: absolute;
   bottom: 10px;
   left: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: 20px;
+  margin-bottom: 20px;
   color: #ddd;
   font-size: 11px;
 }
@@ -214,7 +219,7 @@ header .header-top .header-nav li i {
   right: 30px;
   cursor: pointer;
 }
-@media screen and (max-width:820px) {
+@media screen and (max-width:950px) {
   .hero {
     background-image: none;
     background-color: #fff;
@@ -223,6 +228,9 @@ header .header-top .header-nav li i {
     display: block;
     width: 95%;
     margin: auto;
+  }
+  .hero .container .author-bg {
+    display: none;
   }
   .hero-left {
     position: relative;
@@ -245,9 +253,10 @@ header .header-top .header-nav li i {
   .hero-left img {
     display: block;
     width: 120px;
-    margin: 20px auto 20px auto;
+    margin: 20px 0;
     position: relative;
     left: 50%;
+    transform: translate(50%);
   }
   .hero-left .download-btn {
     background-color: #fff;
@@ -292,10 +301,151 @@ header .header-top .header-nav li i {
 
 nav {
   background-color: #e6e6e6;
-  height: 55px;
 }
-nav li {
-  display: inline;
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+nav ul li {
+  font-size: 18px;
+  padding: 15px 24px;
+  color: #555;
+  text-transform: capitalize;
+}
+nav ul li:first-child {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 3px solid #000;
+}
+nav ul li:nth-child(4) {
+  text-transform: uppercase;
+}
+nav ul li:nth-child(5) {
+  text-transform: uppercase;
+}
+nav ul li:nth-child(6) {
+  text-transform: uppercase;
+}
+nav .fa-angle-down {
+  display: none;
+}
+@media screen and (max-width:950px) {
+  nav {
+    position: relative;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: left;
+  }
+  nav ul li:first-child {
+    background-color: #e6e6e6;
+    border: none;
+  }
+  nav ul li:nth-child(2) {
+    display: none;
+  }
+  nav ul li:nth-child(3) {
+    display: none;
+  }
+  nav ul li:nth-child(4) {
+    display: none;
+  }
+  nav ul li:nth-child(5) {
+    display: none;
+  }
+  nav ul li:nth-child(6) {
+    display: none;
+  }
+  nav .fa-angle-down {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+  }
+}
+
+.lady-video {
+  width: 100%;
+  background-color: #101010;
+  border: 5px solid #000;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+.lady-video h2 {
+  font-size: 36px;
+  margin-top: 80px;
+  font-weight: 400;
+}
+.lady-video p {
+  margin: 20px auto;
+  max-width: 60%;
+}
+.lady-video span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lady-video span img {
+  margin: 20px 30px;
+}
+.lady-video .bg-flash {
+  height: 699px;
+  background-image: url(../img/intro.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.lady-video .bg-flash .img-lady {
+  width: 1000px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.lady-video .bg-flash .img-lady img {
+  width: 96.5%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.lady-video .bg-flash .img-lady .img-frame img {
+  width: 100%;
+}
+.lady-video .bg-flash .img-lady .img-frame #play-video {
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  transform: translate(-50%, -300%);
+}
+@media screen and (max-width:1100px) {
+  .lady-video .bg-flash {
+    height: 400px;
+    width: 0;
+  }
+  .lady-video .bg-flash .img-lady {
+    width: 600px;
+    left: 50%;
+  }
+  .lady-video .bg-flash .img-lady .img-frame #play-video {
+    bottom: 50%;
+    transform: translate(-50%, -200%);
+  }
+}
+@media screen and (max-width:950px) {
+  .lady-video .bg-flash .img-lady {
+    width: 80%;
+  }
+  .lady-video .bg-flash .img-lady .img-frame #play-video {
+    width: 10%;
+    bottom: 50%;
+    transform: translate(-50%, -300%);
+  }
 }
 
 body {
