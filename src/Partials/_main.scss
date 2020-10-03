@@ -492,3 +492,53 @@ nav {
         }
     }
 }
+
+
+.tools-and-effect{
+    background-color: #fff;
+    margin:auto;
+    text-align: center;
+    padding:50px 0;
+
+    & h2{
+        font-size: 36px;
+        font-weight: 400;
+        padding:80px 0;
+    }
+
+    & .effect{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        & .box{
+            margin:20px;
+            width: 15%;
+            // height: 300px;
+
+            & img{
+                width: 100%;
+            }
+        }
+    }
+
+    @#{$tablet}{
+        & .effect{
+            width: 100%;
+            & .box{
+                width: 200px;
+            }
+        }
+    }
+
+    @#{$phone}{
+        & .effect{
+            width: 100%;
+            & .box{
+                width: 40%;
+            }
+        }
+    }
+}
