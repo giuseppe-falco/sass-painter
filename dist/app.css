@@ -497,7 +497,7 @@ nav .fa-angle-down {
 }
 .section-body .section-img i.fas {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
   color: red;
   font-size: 29px;
@@ -784,7 +784,7 @@ footer {
 }
 footer .footer-container {
   margin: auto;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -792,22 +792,24 @@ footer .footer-container {
 footer .footer-container ul {
   margin: 20px 30px;
 }
-footer .footer-container ul:first-child {
-  margin-top: 0;
-}
 footer .footer-container li {
   list-style: none;
   color: #4d4d4d;
   font-size: 12px;
   padding: 8px 0;
+  cursor: pointer;
 }
 footer .footer-container li:hover {
   text-decoration: underline;
+}
+footer .footer-container li:first-child:hover {
+  text-decoration: none;
 }
 footer .footer-container li:first-child {
   font-size: 15px;
   color: #000;
   margin-bottom: 7px;
+  cursor: inherit;
 }
 footer .footer-container #social {
   margin: 0;
