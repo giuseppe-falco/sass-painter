@@ -345,4 +345,150 @@ nav {
     }
 }
 
-// test
+
+
+
+
+.background-illustration{
+    background-color: #222;
+    padding:30px 0 ;
+
+    & .section-pillar{
+        width: 80%;
+        margin:auto;
+        text-align: center;
+        padding-bottom: 60px;
+        
+        & .section-text {
+            color:#fff;
+            margin: auto;
+            max-width: 40%;
+            font-size: 18px;
+            padding:80px 0;
+            line-height: 30px;
+            
+            & h2, h3{
+                font-weight: 400;
+                font-size: 36px;
+                margin-bottom:30px;
+            }
+        }
+
+        & img{
+            width: 50%;
+        }
+
+        @#{$tablet}{
+            & .section-text {
+                max-width: 80%;
+            }
+
+            & img{
+                width: 60%;
+            }
+        }
+
+        @#{$phone}{
+            & .section-text {
+                max-width: 90%;
+                font-size: 16px;
+                line-height: 25px;
+
+                & h2, h3{
+                    font-size: 26px;
+                }
+            }
+
+            & img{
+                width: 95%;
+            }
+        }
+    }
+
+    & #section-coniglioDalCappello{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top:30px;
+        width: 100%;
+
+        & .section-text{
+            max-width: 20%;
+            margin:0;
+            margin-right:80px;
+            text-align: justify;
+            font-size: 18px;
+            word-spacing: 0.2px;
+
+        }
+
+        & img{
+            width: 40%;
+        }
+        
+        @#{$phone}{
+            flex-direction:column-reverse;
+            align-items:center;
+
+            & .section-text {
+                font-size: 16px;
+                max-width: 70%;
+
+                & h2{
+                    font-size: 20px;
+                }
+            }
+
+            & img{
+                width: 90%;
+            }
+
+        }
+    }
+
+    & #section-guys{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-top:30px;
+        width: 100%;
+
+        & .section-text{
+            max-width: 20%;
+            margin:0;
+            margin-left:80px;
+            text-align: justify;
+            font-size: 18px;
+            word-spacing: 0.2px;
+        }
+
+        & h3{
+            font-size: 24px;
+        }
+
+        & img{
+            width: 35%;
+        }
+        
+        @#{$phone}{
+            flex-direction:column-reverse;
+            align-items:center;
+
+            & .section-text {
+                font-size: 16px;
+                max-width: 70%;
+                margin-left:-80px;
+
+                & h2{
+                    font-size: 20px;
+                }
+            }
+
+            & img{
+                width: 90%;
+            }
+
+        }
+    }
+}
